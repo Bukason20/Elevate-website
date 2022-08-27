@@ -1,0 +1,647 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+    overflow-x: hidden;
+}
+
+:root {
+    --first-color: rgb(249, 218,79);
+    --second-color: rgb(236, 36, 76);
+    --third-color:  rgb(1, 24, 52);
+    --fourth-color: rgb(74, 80, 95);
+    --fifth-color: rgb(226, 229, 231);
+    --sixth-color: rgb(1, 47, 104);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+/* -------------------------------------HERO SECTION-------------------------------- */
+
+#hero {
+    background: url(images/intro-bg.jpg);
+    height: fit-content;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    /* position: relative; */
+    padding: 1rem 1rem 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    overflow: hidden;
+    padding: 0.5rem;
+
+}
+.nav-logo{
+    width: 7rem;
+}
+.nav-logo img{
+    width: 100%;
+}
+.burger {
+    background: black;
+    width: fit-content;
+    padding: 0.2rem 0.5rem;
+    overflow: hidden;
+    position: fixed;
+    /* margin-left: 70rem ; */
+    gap: 20rem;
+    right: 2rem;
+    z-index: 1;
+    transition: 1s ease;
+}
+
+.burger .nav{
+    width: 1.7rem;
+    height: 0.2rem;
+    background: white;
+    margin: 0.3rem 0;
+}
+
+.responsive-nav-active {
+    /* display: none; */
+    background: rgb(14,14, 14);
+    /* position: absolute; */
+    top: 0;
+    right: 0;
+    padding: 2.5rem;
+    height: 100%;
+    transition: 1s ease;
+    position: fixed;
+
+    
+}
+.responsive-nav{
+    background: rgb(14,14, 14);
+    position: absolute;
+    top: 0;
+    right: -50%;
+    padding: 2.5rem;
+    height: 100%;
+    transition: 1s ease;
+
+
+    
+}
+
+.text-box{
+    max-width: 60rem;
+    margin: 5rem auto 0;
+    /* background: orange; */
+    text-align: center;
+    padding: 0 2rem;
+}
+.text-title {
+    color: #ccc;
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+}
+
+.text-body {
+    text-align: center;
+    color: var(--second-color);
+    font-size: 3.5rem;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width: 55rem;
+    margin: 0 auto;
+    /* background: yellow; */
+}
+.text-box-button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0 4rem;
+}
+
+.text-box-button a{
+    color: white;
+    border: 3px solid #ccc;
+    padding: 0.8rem 2.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 800;
+    transition: 500ms ease;
+}
+
+.text-box-button a:hover {
+    border-color: var(--first-color);
+    color: var(--first-color);
+}
+
+.text-box-img {
+    max-width: 60rem;
+    margin: 1rem auto 0;
+    margin-bottom: 0 !important;
+}
+.text-box-img img{
+    width: 100%;
+    display: block;
+    /* height: 100%; */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* -----------------------------------------FEATURES SECTION---------------------------------- */
+#features{
+    height: fit-content;
+    background: var(--first-color);
+    padding: 10rem 5rem 5rem;
+}
+.features-title {
+    text-align: center;
+}
+
+.features-title h1{
+    color: var(--third-color);
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    
+}
+.features-title p{
+    color: var(--fourth-color);
+    font-size: 1.5rem;
+    max-width: 45rem;
+    font-weight: lighter;
+    margin: 1rem auto;
+}
+
+#features .line{
+    height: 0.2rem;
+    width: 8rem;
+    background: var(--third-color);
+    margin: 2rem auto;
+}
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 3rem;
+    margin: 4rem 0;
+}
+
+.feature h1{
+    color: var(--second-color);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.feature h2{
+    color: var(--third-color);
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+.feature p{
+    color: black;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+}
+
+/* ----------------------------------------------------OTHER STUFFS SECTION---------------------------------------- */
+
+.other-stuffs, .video-stuffs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 2rem; */
+    
+}
+.other-stuff-content, .video-stuff-content{
+    background: white;
+    padding: 10rem 5rem;
+}
+
+.other-stuff-title h3, .video-stuff-title h3{
+    color: #ccc;
+}
+.other-stuff-title p, .video-stuff-title p{
+    color: var(--third-color);
+    font-size: 3rem;
+    font-weight: bold;
+    max-width: 30rem;
+    
+}
+.other-stuff-body, .video-stuff-body{
+    line-height: 1.6rem;
+    font-size: 1.1rem;
+    color: var(--third-color);
+}
+.other-stuffs a, .video-stuffs a{
+    display: block;
+    width: fit-content;
+    background: var(--fifth-color);
+    padding: 1rem 2rem;
+    color: var(--third-color);
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+.other-img-container{
+    background: var(--fifth-color);
+    padding: 10rem 0;
+    overflow: hidden;
+}
+.other-stuff-img, .video-stuff-img{
+    max-width: 35rem;
+
+}
+.other-stuff-img img, .video-stuff-img img{
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    display: block;
+}
+.other-stuffs .line, .video-stuffs .line{
+    height: 0.2rem;
+    width: 4rem;
+    margin: 1rem 0;
+    background: var(--fifth-color);
+    
+}
+
+.video-img-container {
+    background: var(--fifth-color);
+    padding: 10rem 5rem;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+/* ----------------------------------------------AWARDS SECTION-------------------------------------- */
+.awards-container{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background: var(--third-color);
+    padding: 5rem;
+    gap: 2rem;
+}
+.award{
+    text-align: center;
+}
+.award h1{
+    color: white;
+    font-size: 3rem;
+}
+.award h3{
+    color: var(--first-color);
+}
+
+/* ---------------------------------------------------PRICING SECTION-------------------------------------- */
+#pricings {
+    background: var(--fifth-color);
+    padding: 7rem 5rem;
+}
+
+.pricing-title {
+    text-align: center;
+}
+
+.pricing-title h1{
+    color: var(--third-color);
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    
+}
+.pricing-title p{
+    color: var(--fourth-color);
+    font-size: 1.5rem;
+    max-width: 45rem;
+    font-weight: lighter;
+    margin: 1rem auto;
+}
+#pricings .line{
+    height: 0.2rem;
+    width: 8rem;
+    background: var(--third-color);
+    margin: 2rem auto;
+}
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+}
+.plan1, .plan3 {
+    background: white;
+    text-align: center;
+    /* padding: 2rem; */
+    border: 1px solid #ccc;
+}
+.plan2{
+    background: var(--sixth-color);
+    text-align: center;
+    position: relative;
+    /* padding: 2rem; */
+}
+.price-title {
+    margin: 5rem auto 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--third-color);
+}
+.plan2 .price-title {
+    color: white;
+}
+.pricing-line {
+    height: 0.1rem;
+    width: 5rem;
+    background: var(--fifth-color);
+    margin: 0 auto 2rem;
+}
+.price {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    /* background: green; */
+    /* padding: 0 !important; */
+    height: fit-content;
+}
+.price p{
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--third-color);
+}
+.plan2 .price p{
+    color: white;
+}
+.price .dollar p{
+    font-size: 1.5rem;
+    /* margin-bottom: 3rem; */
+    /* background: yellow; */
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+.price-time{
+    color: rgb(160, 160, 160);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.pricing-features {
+    padding: 0 2rem;
+    /* background: orange; */
+}
+.pricing-features p {
+    border-bottom: 1px solid var(--fifth-color);
+    padding: 0.8rem;
+    font-size: 1.2rem;
+}
+.price-size {
+    color: var(--third-color);
+    font-weight: bold;
+}
+.plan2 .price-size {
+    color: white;
+}
+
+.price-cta a{
+    padding: 1rem 2rem;
+    margin: 3rem auto;
+    display: block;
+    background: var(--sixth-color);
+    width: fit-content;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.09rem;
+    transition: 500ms ease;
+}
+.price-cta a:hover {
+    padding: 1rem 3rem;
+    
+}
+.plan2 .price-cta a{
+    background: white;
+    color: var(--sixth-color);
+}
+.popular{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--second-color);
+    padding: 1rem 4rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.09rem;
+
+}
+
+/* ------------------------------------------------DOWNLOAD SECTION--------------------------------------------- */
+#download{
+    padding:  5rem;
+    background: rgb(2, 24, 52);
+}
+.download-title {
+    text-align: center;
+}
+
+.download-title h1{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    
+}
+.download-title p{
+    color: #ccc;
+    font-size: 1.5rem;
+    max-width: 45rem;
+    font-weight: lighter;
+    margin: 1rem auto;
+    
+}
+.download-cta a{
+    padding: 1rem 2rem;
+    margin: 3rem auto;
+    display: block;
+    background: white;
+    width: fit-content;
+    color: var(--third-color);
+    font-weight: bolder;
+    letter-spacing: 0.09rem;
+    transition: 500ms ease;
+    text-align: center;
+}
+
+/* -------------------------------------------------NEWSLETTER SECTION-------------------------------- */
+#newsletter {
+    padding: 7rem  5rem;
+    background: rgb(0,19, 43);
+}
+.newsletter-title{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    /* background: red; */
+}
+#newsletter form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1rem; */
+}
+
+#newsletter form input[type = text] {
+    width: 30rem;
+    background: rgb(0, 13, 30);
+    display: flex;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+#newsletter form input[type = submit]{
+    padding: 1rem 2rem;
+    width: 15rem ;
+    background: white;
+    outline: none;
+    border: none;
+    color: var(--third-color);
+    font-weight: bolder;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+#newsletter form input[type = submit]:hover {
+    background: var(--first-color);
+}
+
+/* --------------------------------------------------FOOTER SECTION----------------------------------------------- */
+#footer{
+    background: rgb(14,14, 14);
+    padding: 5rem;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.footer-item {
+    text-align: center;
+    /* padding: 1rem; */
+}
+.footer-item h2{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    
+}
+.footer-item p{
+    color: #ccc;
+    line-height: 2rem;
+    font-size: 1.1rem;
+    font-weight: 100;
+    
+}
+
+
+
+
+
+/* --------------------------------------FOR SMALL DEVICES------------------------------- */
+
+
+@media screen and (max-width: 600px){
+    .text-body{
+        font-size: 2.5rem
+    }
+    .text-box-button{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    /* ------------------------------------FEATURES----------------------------------------------- */
+    #features {
+        padding: 6rem 2rem;
+    }
+    .features-title h1{
+        font-size: 2.5rem;
+        letter-spacing: 0;
+    }
+    .features-title p{
+        max-width: 70rem;
+    }
+    .features-container{
+        grid-template-columns: 1fr;
+    }
+    /* ----------------------------------------------OTHER STUFFS--------------------------------------- */
+    .other-stuffs, .video-stuffs{
+        grid-template-columns: 1fr;
+        border: 1px solid var(--fifth-color);
+    }
+    .other-img-container, .video-img-container{
+        background: white;
+        padding: 5rem 2rem;
+    }
+    .other-stuff-content, .video-stuff-content{
+        padding: 5rem 2rem;
+        
+    }
+    /* -----------------------------------------AWARDS SECTION------------------------------------------------ */
+    .awards-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* -----------------------------------------PRICING SECTION----------------------------------------------  */
+    #pricings {
+        padding: 5rem 2rem;
+    }
+    .pricing-title h1{
+        font-size: 2.5rem;
+        letter-spacing: 0;
+    }
+    .pricing-title p{
+        max-width: 70rem;
+    }
+    .pricing-container {
+        grid-template-columns: 1fr;
+       
+    }
+    /* -----------------------------------------------DOWNLOAD SECTION----------------------------------------------- */
+    #download {
+        padding: 5rem 2rem;
+    }
+    .download-title h1{
+        font-size: 2.5rem;
+        letter-spacing: 0;
+    }
+    .download-title p{
+        max-width: 70rem;
+    }
+
+    /* -----------------------------------------------NEWSLETTER SECTION----------------------------------------------------- */
+    #newsletter {
+        padding: 5rem 2rem;
+    }
+    #newsletter form{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    #newsletter form input[type = text]{
+        width: 20rem;
+        text-align: center;
+    }
+    #newsletter form input[type = submit]{
+        width: 20rem;
+    }
+    /* --------------------------------------------FOOTER SECTION---------------------------------------------------- */
+    #footer {
+        padding: 5rem 2rem;
+    }
+    .footer-content{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
